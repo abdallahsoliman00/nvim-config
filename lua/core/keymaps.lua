@@ -5,6 +5,11 @@ vim.keymap.set('i', '<S-Tab>', '<C-d>', opts)
 vim.keymap.set('n', '<S-Tab>', '<<', opts)
 vim.keymap.set('v', '<S-Tab>', '<gv', opts)
 
+-- Resize windows
+vim.keymap.set('n', '<Up>', ':resize +2<CR>', opts)
+vim.keymap.set('n', '<Down>', ':resize -2<CR>', opts)
+vim.keymap.set('n', '<Left>', ':vertical resize +2<CR>', opts)
+vim.keymap.set('n', '<Right>', ':vertical resize -2<CR>', opts)
 
 if vim.g.neovide then
     vim.keymap.set({ "n", "v" }, "<C-=>", ":lua vim.g.neovide_scale_factor = vim.g.neovide_scale_factor + 0.1<CR>")
