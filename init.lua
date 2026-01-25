@@ -31,8 +31,9 @@ require('lazy').setup({
   require 'plugins.neo-tree',
   require 'plugins.gitsigns',
   require 'plugins.treesitter',
+  require 'plugins.treesitter-cpp',
   require 'plugins.bufferline',
   require 'plugins.lualine',
-  --require 'plugins.comment',
+  require 'plugins.comment',
   require 'plugins.autopairs', 
 })
