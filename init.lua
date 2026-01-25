@@ -26,37 +26,13 @@ rtp:prepend(lazypath)
 
 require('lazy').setup({
   -- NOTE: Plugins can be added with a link (or for a github repo: 'owner/repo' link).
-
-  {
-    "navarasu/onedark.nvim",
-    priority = 1000, -- make sure to load this before all the other start plugins
-    config = function()
-      require('onedark').setup {
-        style = 'darker',
-	colors = {
-	  bg0 = "#181a1f",
-	  green = "#81cf5a",
-  	},
-      }
-      require('onedark').load()
-    end
-  },
-  
+  require 'plugins.onedark',  
   'NMAC427/guess-indent.nvim',
-
-  {
-    "nvim-neo-tree/neo-tree.nvim",
-    branch = "v3.x",
-    dependencies = {
-      "nvim-lua/plenary.nvim",
-      "MunifTanjim/nui.nvim",
-      "nvim-tree/nvim-web-devicons", -- optional, but recommended
-    },
-    lazy = false
-  },
-
-  
   require 'plugins.neo-tree',
   require 'plugins.gitsigns',
-  
+  require 'plugins.treesitter',
+  require 'plugins.bufferline',
+  require 'plugins.lualine',
+  --require 'plugins.comment',
+  require 'plugins.autopairs', 
 })
