@@ -27,7 +27,7 @@ rtp:prepend(lazypath)
 require('lazy').setup({
   -- NOTE: Plugins can be added with a link (or for a github repo: 'owner/repo' link).
   require 'plugins.onedark',  
-  'NMAC427/guess-indent.nvim',
+  require 'plugins.guess-indent',
   require 'plugins.neo-tree',
   require 'plugins.gitsigns',
   require 'plugins.treesitter',
@@ -36,4 +36,5 @@ require('lazy').setup({
   require 'plugins.lualine',
   require 'plugins.comment',
   require 'plugins.autopairs', 
+  require 'plugins.telescope',
 })
