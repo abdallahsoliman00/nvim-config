@@ -7,7 +7,20 @@ return {
             colors = {
                 bg0 = "#181a1f",
                 green = "#81cf5a",
+                purple = "#aa5dfd",
+                rich_orange = "#f47344",
+                teal = "#35b093",
+                var = "#d0404f",
+                yellow = "#f4c244",
+                cmnt = "#c7cca0",
             },
+            highlights = {
+                ["@lsp.type.keyword"] = { fg = "$purple" },
+                ["@lsp.type.property"] = { fg = "$cyan" },
+                ["@lsp.type.parameter"] = { fg = "$rich_orange", fmt = 'italic' },
+                ["@lsp.type.variable"] = { fg = "$var" },
+                ["@lsp.type.comment"] = { fg = "$cmnt" },
+            }
         }
         require('onedark').load()
     end
