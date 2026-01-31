@@ -151,7 +151,8 @@ return {
 
       local servers = {
         clangd = {},
-        ruff ={},
+        pyright = {},
+        -- ruff ={},
         lua_ls = {
           settings = {
             Lua = {
@@ -173,22 +174,22 @@ return {
             },
           },
         },
-        pylsp = {
-          settings = {
-            pylsp = {
-              plugins = {
-                pyflakes = { enabled = false },
-                pycodestyle = { enabled = false },
-                autopep8 = { enabled = false },
-                yapf = { enabled = false },
-                mccabe = { enabled = false },
-                pylsp_mypy = { enabled = false },
-                pylsp_black = { enabled = false },
-                pylsp_isort = { enabled = false },
-              },
-            },
-          },
-        },
+      --   pylsp = {
+      --     settings = {
+      --       pylsp = {
+      --         plugins = {
+      --           pyflakes = { enabled = false },
+      --           pycodestyle = { enabled = false },
+      --           autopep8 = { enabled = false },
+      --           yapf = { enabled = false },
+      --           mccabe = { enabled = false },
+      --           pylsp_mypy = { enabled = false },
+      --           pylsp_black = { enabled = false },
+      --           pylsp_isort = { enabled = false },
+      --         },
+      --       },
+      --     },
+      --   },
       }
 
       local ensure_installed = vim.tbl_keys(servers or {})
