@@ -4,7 +4,7 @@ end
 
 local function compile_plugins(plugin_names)
     local plugin_table = {}
-    for i, plugin in ipairs(plugin_names) do
+    for _, plugin in ipairs(plugin_names) do
         table.insert(plugin_table, add_plugin(plugin))
     end
     return plugin_table
@@ -23,6 +23,7 @@ local plugins = {
     "lualine",
     "guess-indent",
     "gitsigns",
+    "markdown",
 }
 
 require("plugins.lazy")

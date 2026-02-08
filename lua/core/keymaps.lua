@@ -69,7 +69,7 @@ map('i', '<C-Del>', '<C-o>dw', opts)
 
 -- Git add current buffer/file
 map('n', '<leader>ga', function()
-    local file = vim.fn.expand('%')
+    local file = vim.fn.expand('%.')
     vim.fn.system('git add ' .. file)
     print('Added ' .. file .. ' to git')
 end)
