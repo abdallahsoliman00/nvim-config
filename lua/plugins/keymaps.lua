@@ -31,5 +31,5 @@ map('n', 'gW', ':Telescope lsp_dynamic_worspace_symbols<CR>', { desc = "Open Wor
 map('n', 'grt', ':Telescope lsp_type_definitions<CR>', { desc = "[G]oto [T]ype Definition" })
 
 -- Markdown Preview --
-map('n', '<leader>P', ':LivePreview start')
-map('n', '<leader>Px', ':LivePreview close')
+map('n', '<leader>P', ':LivePreview start<CR>', opts)
+map('n', '<leader>Px', ':LivePreview close<CR>', opts)
