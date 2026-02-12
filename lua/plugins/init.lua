@@ -24,6 +24,7 @@ local plugins = {
     "markdown",
     "indent-lines",
     "guess-indent",
+    "cmake",
 }
 
 require("plugins.lazy")

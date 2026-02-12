@@ -1,9 +1,15 @@
 local opts = { noremap = true, silent = true }
 local map = vim.keymap.set
 
+
 -- Set leader key
 vim.g.mapleader = ' '
 vim.g.maplocalleader = ' '
+
+
+-- Stay in indent mode
+map("v", "<", "<gv", opts)
+map("v", ">", ">gv", opts)
 
 
 -- Remap redo key
@@ -46,7 +52,7 @@ map('n', '<C-l>', ':wincmd l<CR>', opts)
 map('v', 'p', '"_dP', opts)
 
 
--- delete without copying to register
+-- Delete without copying to register
 map('v', 'd', '"_d', opts)
 map('n', 'dd', '"_dd', opts)
 
@@ -61,6 +67,15 @@ map('n', '<leader>t', '<cmd> enew <CR>', opts) -- new buffer
 -- Undo and Redo with Ctrl+Z and Ctrl+Y in insert mode
 map('i', '<C-z>', '<C-o>u', opts)
 map('i', '<C-y>', '<C-o><C-r>', opts)
+
+
+-- Move text up and down
+map("i", "<A-Up>", "<Esc>:m .-2<CR>==gi", opts)
+map("i", "<A-Down>", "<Esc>:m .+1<CR>==gi", opts)
+map("n", "<A-j>", ":m .+1<CR>==", opts)
+map("n", "<A-k>", ":m .-2<CR>==", opts)
+map("v", "<A-j>", ":move '>+1<CR>gv=gv", opts)
+map("v", "<A-k>", ":move '<-2<CR>gv=gv", opts)
 
 
 -- Easy paste in insert mode
@@ -86,6 +101,12 @@ map('n', '<Esc>', '<cmd>nohlsearch<CR>')
 -- Easy line adding with enter
 map('n', '<CR>', 'o<Esc>', { desc = 'Add newline below in normal mode', noremap = true, silent = true })
 map('n', '<S-CR>', 'O<Esc>', { desc = 'Add newline below in normal mode', noremap = true, silent = true })
+
+
+-- Diagnostics
+map("n", "<leader>dn", ":lua vim.diagnostic.goto_next()<CR>")
+map("n", "<leader>dN", ":lua vim.diagnostic.goto_prev()<CR>")
+map("n", "<leader>ds", ":lua vim.lsp.buf.code_action()<CR>")
 
 
 -- Easy normal mode from terminal mode
