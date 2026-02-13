@@ -75,8 +75,9 @@ map("v", "<A-k>", ":move '<-2<CR>gv=gv", opts)
 map('c', '<C-v>', '<C-r>+')
 
 
--- Delete next word with Ctrl+Delete in insert mode
+-- Delete word with Ctrl+Delete and Ctrl+Backspace in insert mode
 map('i', '<C-Del>', '<C-o>dw', opts)
+map('i', '<C-BS>', '<C-o>', opts)
 
 
 -- Git add current buffer/file
