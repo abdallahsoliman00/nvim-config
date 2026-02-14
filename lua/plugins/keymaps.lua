@@ -32,6 +32,10 @@ map('n', '<leader>Px', ':LivePreview close<CR>', opts)
 -- Toggle autoformat
 map('n', '<leader>tf', ':ToggleAutoformat<CR>', { silent = true, desc = 'Toggle autoformat' })
 
+-- Toggleterm toggle terminal
+map('n', '<C-\\>', ':ToggleTerm<CR>', opts)
+map('t', '<C-\\>', '<C-\\><C-n>:ToggleTerm<CR>', opts)
+
 -- Manual format keymap for all languages
 vim.keymap.set('n', '<leader>fm', function()
     require('conform').format({ async = true, lsp_fallback = false })
