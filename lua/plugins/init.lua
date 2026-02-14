@@ -1,5 +1,5 @@
 local function add_plugin(name)
-    return require("plugins.plugin_files." .. name)
+    return require('plugins.plugin_files.' .. name)
 end
 
 local function compile_plugins(plugin_names)
@@ -11,25 +11,26 @@ local function compile_plugins(plugin_names)
 end
 
 local plugins = {
-    "onedark",
-    "lsp",
-    "neotree",
-    "treesitter",
-    "telescope",
-    "autocomplete",
-    "bufferline",
-    "autopairs",
-    "lualine",
-    "gitsigns",
-    "markdown",
-    "indent-lines",
-    "guess-indent",
-    "cmake",
+    'onedark',
+    'lsp',
+    'neotree',
+    'treesitter',
+    'telescope',
+    'autocomplete',
+    'bufferline',
+    'autopairs',
+    'lualine',
+    'gitsigns',
+    'markdown',
+    'indent-lines',
+    'guess-indent',
+    'cmake',
+    'vimbegood',
 }
 
-require("plugins.lazy")
-require("lazy").setup({
+require('plugins.lazy')
+require('lazy').setup({
     compile_plugins(plugins),
 })
 
-require("plugins.keymaps")
+require('plugins.keymaps')

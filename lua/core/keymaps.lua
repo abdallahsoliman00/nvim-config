@@ -75,9 +75,14 @@ map("v", "<A-k>", ":move '<-2<CR>gv=gv", opts)
 map('c', '<C-v>', '<C-r>+')
 
 
--- Delete word with Ctrl+Delete and Ctrl+Backspace in insert mode
+-- Easy Paste in insert mode
+map('i', '<C-v>', '<C-o>P')
+
+
+-- Delete word with Ctrl+Delete and Ctrl+Backspace
 map('i', '<C-Del>', '<C-o>dw', opts)
-map('i', '<C-BS>', '<C-o>', opts)
+map('i', '<C-BS>', '<C-w>', opts)
+map('t', '<C-BS>', '<C-w>', opts)
 
 
 -- Git add current buffer/file

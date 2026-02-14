@@ -40,7 +40,7 @@ return {
                 if not vim.g.autoformat_enabled then
                     return
                 end
-                local autoformat_fts = { 'lua', 'python', 'json' }
+                local autoformat_fts = { 'lua', 'python', 'json', 'html', 'css' }
                 local ft = vim.bo[bufnr].filetype
                 if vim.tbl_contains(autoformat_fts, ft) then
                     return {
@@ -51,7 +51,7 @@ return {
             end,
         })
 
-        vim.g.autoformat_enabled = true
+        vim.g.autoformat_enabled = false
 
         vim.api.nvim_create_user_command('ToggleAutoformat', function()
             vim.g.autoformat_enabled = not vim.g.autoformat_enabled
