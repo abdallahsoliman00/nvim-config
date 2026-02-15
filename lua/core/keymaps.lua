@@ -12,19 +12,16 @@ map("v", "<", "<gv", opts)
 map("v", ">", ">gv", opts)
 
 
+-- Easy unindent
+map('i', '<S-Tab>', '<C-o><<', opts)
+
+
 -- Remap redo key
 map('n', 'U', '<C-r>', opts)
 
 
 -- Toggle line wrapping
 map('n', '<leader>lw', '<cmd>set wrap!<CR>', opts)
-
-
--- Default shell
-vim.opt.shell = "powershell"
-vim.opt.shellcmdflag = "-command"
-vim.opt.shellquote = "\""
-vim.opt.shellxquote = ""
 
 
 -- Resize windows
@@ -104,7 +101,7 @@ map('n', '<S-CR>', 'O<Esc>', opts)
 
 -- Diagnostics
 map("n", "<leader>dn", ":lua vim.diagnostic.goto_next()<CR>")
-map("n", "<leader>dN", ":lua vim.diagnostic.goto_prev()<CR>")
+map("n", "<leader>dp", ":lua vim.diagnostic.goto_prev()<CR>")
 map("n", "<leader>ds", ":lua vim.lsp.buf.code_action()<CR>")
 
 

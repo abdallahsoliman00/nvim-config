@@ -1,3 +1,9 @@
+-- Default shell
+vim.opt.shell = "powershell"
+vim.opt.shellcmdflag = "-command"
+vim.opt.shellquote = "\""
+vim.opt.shellxquote = ""
+
 vim.wo.number = true
 vim.o.relativenumber = true
 vim.o.clipboard = 'unnamedplus'
