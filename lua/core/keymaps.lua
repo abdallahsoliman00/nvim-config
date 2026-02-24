@@ -86,7 +86,7 @@ map('c', '<C-v>', '<C-r>+')
 
 
 -- Easy Paste in insert mode
-map('i', '<C-v>', '<C-o>P')
+map('i', '<C-v>', '<C-o>p')
 
 
 -- Delete word with Ctrl+Delete and Ctrl+Backspace
