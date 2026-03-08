@@ -29,7 +29,9 @@ local plugins = {
     'toggleterm',
     'live-server',
     'comment',
-    'neogen'
+    'neogen',
+    'themery',
+    'tokyonight',
 }
 
 require('plugins.lazy')
