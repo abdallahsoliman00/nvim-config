@@ -143,6 +143,6 @@ end
 -- Toggle fullscreen in Neovide
 if vim.g.neovide then
     vim.g.neovide_fullscreen = false
-    map({ "n", "<C-F>", ":lua vim.g.neovide_fullscreen = not vim.g.neovide_fullscreen<CR>"})
+    map("n", "<C-S-F>", ":lua vim.g.neovide_fullscreen = not vim.g.neovide_fullscreen<CR>", { silent = true } )
 end
 
