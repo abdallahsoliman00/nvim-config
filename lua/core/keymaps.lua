@@ -43,7 +43,8 @@ map('v', 'p', '"_dP', opts)
 
 
 -- Delete without copying to register
-map('v', 'd', '"_d', opts)
+map({'v', 'i'}, 'x', '"_x', opts)
+map({'v', 'i'}, 'X', '"_X', opts)
 map('n', 'dd', '"_dd', opts)
 
 map('n', 'ciw', '"_ciw', { noremap = true })
