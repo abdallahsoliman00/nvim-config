@@ -32,6 +32,7 @@ local plugins = {
     'neogen',
     'themery',
     'tokyonight',
+    'flash'
 }
 
 require('plugins.lazy')
