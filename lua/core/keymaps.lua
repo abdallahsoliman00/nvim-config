@@ -43,18 +43,15 @@ map('v', 'p', '"_dP', opts)
 
 
 -- Delete without copying to register
-map({'v', 'i'}, 'x', '"_x', opts)
-map({'v', 'i'}, 'X', '"_X', opts)
+map({'n', 'v'}, 'x', '"_x', opts)
+map({'n', 'v'}, 'X', '"_X', opts)
+map({'n', 'v'}, 'c', '"_c', opts)
+map({'n', 'v'}, 'C', '"_C', opts)
+map({'n', 'v'}, 's', '"_s', opts)
+map({'n', 'v'}, 'S', '"_S', opts)
+map({'n', 'v'}, 'D', '"_D', opts)
 map('n', 'dd', '"_dd', opts)
 
-map('n', 'ciw', '"_ciw', { noremap = true })
-map('n', 'caw', '"_caw', { noremap = true })
-map('n', 'ci"', '"_ci"', { noremap = true })
-map('n', "ci'", '"_ci\'', { noremap = true })
-map('n', 'ci(', '"_ci(', { noremap = true })
-map('n', 'ci{', '"_ci{', { noremap = true })
-map('n', 'ci[', '"_ci[', { noremap = true })
-map('n', 'ci<', '"_ci<', { noremap = true })
 
 -- Buffers
 map('n', '<leader>q', ':bnext<CR>', opts)
