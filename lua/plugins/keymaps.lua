@@ -51,5 +51,5 @@ map('t', '<C-\\>', '<C-\\><C-n>:ToggleTerm<CR>', opts)
 
 -- Manual format keymap for all languages
 vim.keymap.set('n', '<leader>fm', function()
-    require('conform').format({ async = true, lsp_fallback = false })
+    require('conform').format({ async = true, lsp_fallback = true })
 end, { desc = 'Format buffer' })
