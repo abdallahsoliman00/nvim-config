@@ -26,6 +26,15 @@ map('n', 'gO', ':Telescope lsp_document_symbols<CR>', { desc = 'Open Document Sy
 map('n', 'gW', ':Telescope lsp_dynamic_worspace_symbols<CR>', { desc = 'Open Workspace Symbols' })
 map('n', 'grt', ':Telescope lsp_type_definitions<CR>', { desc = '[G]oto [T]ype Definition' })
 
+-- DAP --
+map('n', '<leader>db', ':DapToggleBreakpoint<CR>', opts)
+map('n', '<leader>dc', ':DapContinue<CR>', opts)
+map('n', '<leader>do', ':DapStepOver<CR>', opts)
+map('n', '<leader>di', ':DapStepInto<CR>', opts)
+map('n', '<leader>dO', ':DapStepOut<CR>', opts)
+map('n', '<leader>dq', ':DapTerminate<CR>', opts)
+map('n', '<leader>du', ':DapUiToggle<CR>', opts)
+
 -- Markdown Preview --
 map('n', '<leader>md', ':LivePreview start<CR>', opts)
 map('n', '<leader>mdx', ':LivePreview close<CR>', opts)

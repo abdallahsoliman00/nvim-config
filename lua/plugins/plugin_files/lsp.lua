@@ -1,7 +1,7 @@
 return {
     'mason-org/mason-lspconfig.nvim',
     opts = {
-        ensure_installed = { 'lua_ls', 'clangd', 'basedpyright', 'neocmakelsp', 'json-lsp', 'marksman' },
+        ensure_installed = { 'lua_ls', 'clangd', 'basedpyright', 'neocmakelsp', 'json-lsp', 'marksman', 'harper-ls' },
     },
     dependencies = {
         {
@@ -23,7 +23,14 @@ return {
         })
 
         -- Setup mason-lspconfig
-        require('mason-lspconfig').setup()
+        require('mason-lspconfig').setup({
+            automatic_installation = true,
+            automatic_enable = {
+                exclude = {
+                    'harper-ls',
+                },
+            },
+        })
 
         -- Setup conform
         require('conform').setup({

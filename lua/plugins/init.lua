@@ -32,7 +32,8 @@ local plugins = {
     'neogen',
     'themery',
     'tokyonight',
-    'flash'
+    'flash',
+    'nvim-dap',
 }
 
 require('plugins.lazy')
