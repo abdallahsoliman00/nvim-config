@@ -34,6 +34,7 @@ local plugins = {
     'tokyonight',
     'flash',
     'nvim-dap',
+    'java-lsp',
 }
 
 require('plugins.lazy')

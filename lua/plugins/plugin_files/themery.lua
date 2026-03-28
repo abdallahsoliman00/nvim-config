@@ -4,7 +4,7 @@ return {
     config = function()
         -- Minimal config
         require('themery').setup({
-            themes = { 'onedark', 'tokyonight-night', 'tokyonight-storm', 'tokyonight-day', 'tokyonight-moon' },
+            themes = { 'onedark', 'tokyonight-night', 'tokyonight-storm', 'tokyonight-moon' },
             livePreview = true, -- Apply theme while picking. Default to true.
         })
     end,

@@ -1,14 +1,36 @@
 return {
     'mason-org/mason-lspconfig.nvim',
-    opts = {
-        ensure_installed = { 'lua_ls', 'clangd', 'basedpyright', 'neocmakelsp', 'json-lsp', 'marksman', 'harper-ls' },
-    },
     dependencies = {
         {
             'mason-org/mason.nvim',
-            opts = {
-                ensure_installed = { 'stylua', 'black', 'clang-format', 'prettier' },
-            },
+            config = function()
+                require('mason').setup()
+            end,
+        },
+        {
+            'WhoIsSethDaniel/mason-tool-installer.nvim',
+            config = function()
+                require('mason-tool-installer').setup({
+                    ensure_installed = {
+                        -- LSP servers
+                        'lua-language-server',
+                        'clangd',
+                        'basedpyright',
+                        'neocmakelsp',
+                        'jdtls',
+                        'json-lsp',
+                        'marksman',
+                        'harper-ls',
+                        'html',
+                        'cssls',
+                        -- Formatters
+                        'stylua',
+                        'black',
+                        'clang-format',
+                        'prettier',
+                    },
+                })
+            end,
         },
         'neovim/nvim-lspconfig',
         'stevearc/conform.nvim',
@@ -21,17 +43,8 @@ return {
                 spacing = 2,
             },
         })
-
         -- Setup mason-lspconfig
-        require('mason-lspconfig').setup({
-            automatic_installation = true,
-            automatic_enable = {
-                exclude = {
-                    'harper-ls',
-                },
-            },
-        })
-
+        require('mason-lspconfig').setup({})
         -- Setup conform
         require('conform').setup({
             formatters_by_ft = {
@@ -57,30 +70,22 @@ return {
                 end
             end,
         })
-
         vim.g.autoformat_enabled = false
-
         vim.api.nvim_create_user_command('ToggleAutoformat', function()
             vim.g.autoformat_enabled = not vim.g.autoformat_enabled
             print('Autoformat ' .. (vim.g.autoformat_enabled and 'enabled' or 'disabled'))
         end, {})
-
         -- Enable document highlight on hover
         vim.api.nvim_create_autocmd('LspAttach', {
             callback = function(args)
                 local client = vim.lsp.get_client_by_id(args.data.client_id)
-
-                -- Check if the server supports document highlight
                 if client.server_capabilities.documentHighlightProvider then
-                    -- Highlight references when cursor is held
                     vim.api.nvim_create_autocmd({ 'CursorHold', 'CursorHoldI' }, {
                         buffer = args.buf,
                         callback = function()
                             vim.lsp.buf.document_highlight()
                         end,
                     })
-
-                    -- Clear highlights when cursor moves
                     vim.api.nvim_create_autocmd({ 'CursorMoved', 'CursorMovedI' }, {
                         buffer = args.buf,
                         callback = function()
@@ -94,5 +99,6 @@ return {
         vim.api.nvim_set_hl(0, 'LspReferenceText', { bg = '#3d3d3d' })
         vim.api.nvim_set_hl(0, 'LspReferenceRead', { bg = '#3d3d3d' })
         vim.api.nvim_set_hl(0, 'LspReferenceWrite', { bg = '#4d4d3d' })
+        vim.cmd('LspStop harper_ls')
     end,
 }
