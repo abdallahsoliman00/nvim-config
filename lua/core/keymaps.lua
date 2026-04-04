@@ -132,10 +132,10 @@ map('v', "'", wrap_selection("'", "'"))
 
 -- Zoom in/out in Neovide
 if vim.g.neovide then
-    vim.g.neovide_scale_factor = 0.75 -- default zoom
+    vim.g.neovide_scale_factor = 0.70 -- default zoom
     map({ "n", "v" }, "<C-=>", ":lua vim.g.neovide_scale_factor = vim.g.neovide_scale_factor + 0.05<CR>")
     map({ "n", "v" }, "<C-->", ":lua vim.g.neovide_scale_factor = vim.g.neovide_scale_factor - 0.05<CR>")
-    map({ "n", "v" }, "<C-0>", ":lua vim.g.neovide_scale_factor = 0.75<CR>")
+    map({ "n", "v" }, "<C-0>", ":lua vim.g.neovide_scale_factor = 0.70<CR>")
 end
 
 -- Toggle fullscreen in Neovide

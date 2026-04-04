@@ -23,6 +23,7 @@ return {
                         'harper-ls',
                         'html',
                         'cssls',
+                        'typescript-language-server',
                         -- Formatters
                         'stylua',
                         'black',
@@ -55,6 +56,10 @@ return {
                 json = { 'prettier' },
                 html = { 'prettier' },
                 css = { 'prettier' },
+                javascript = { 'prettier' },
+                typescript = { 'prettier' },
+                javascriptreact = { 'prettier' },
+                typescriptreact = { 'prettier' },
             },
             format_on_save = function(bufnr)
                 if not vim.g.autoformat_enabled then
