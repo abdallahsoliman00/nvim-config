@@ -6,6 +6,7 @@ return {
         require('nvim-treesitter').install({
             'c', 'cpp', 'python', 'html', 'css', 'lua',
             'make', 'cmake', 'yaml', 'json', 'markdown',
+            'typescript', 'javascript', 'rust'
         })
     end,
     opts = {

@@ -24,6 +24,7 @@ return {
                         'html',
                         'cssls',
                         'typescript-language-server',
+                        'rust-analyzer',
                         -- Formatters
                         'stylua',
                         'black',
@@ -44,8 +45,16 @@ return {
                 spacing = 2,
             },
         })
+
         -- Setup mason-lspconfig
-        require('mason-lspconfig').setup({})
+        require('mason-lspconfig').setup({
+            automatic_enable = {
+                exclude = {
+                    "harper_ls"
+                }
+            }
+        })
+
         -- Setup conform
         require('conform').setup({
             formatters_by_ft = {
@@ -75,11 +84,13 @@ return {
                 end
             end,
         })
+
         vim.g.autoformat_enabled = false
         vim.api.nvim_create_user_command('ToggleAutoformat', function()
             vim.g.autoformat_enabled = not vim.g.autoformat_enabled
             print('Autoformat ' .. (vim.g.autoformat_enabled and 'enabled' or 'disabled'))
         end, {})
+
         -- Enable document highlight on hover
         vim.api.nvim_create_autocmd('LspAttach', {
             callback = function(args)
@@ -104,6 +115,6 @@ return {
         vim.api.nvim_set_hl(0, 'LspReferenceText', { bg = '#3d3d3d' })
         vim.api.nvim_set_hl(0, 'LspReferenceRead', { bg = '#3d3d3d' })
         vim.api.nvim_set_hl(0, 'LspReferenceWrite', { bg = '#4d4d3d' })
-        vim.cmd('LspStop harper_ls')
+        -- vim.cmd('LspStop harper_ls')
     end,
 }
