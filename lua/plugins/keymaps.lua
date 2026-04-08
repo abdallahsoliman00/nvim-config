@@ -8,7 +8,8 @@ map('n', '<leader>e', ':Neotree reveal<cr>:vertical resize 30<CR>', opts)
 
 -- Telescope --
 map('n', '<leader>sf', ':Telescope find_files<CR>', { desc = 'Telescope find files' })
-map('n', '<leader>rg', ':Telescope live_grep<CR>', { desc = 'Telescope live grep' })
+map('n', '<leader>gr', ':Telescope live_grep<CR>', { desc = 'Telescope live grep' })
+map('n', '<leader>gs', ':Telescope grep_string<CR>', { desc = 'Telescope grep string under cursor' })
 
 -- Gitsigns --
 map('n', '<leader>hh', ':Gitsigns preview_hunk<CR>')
