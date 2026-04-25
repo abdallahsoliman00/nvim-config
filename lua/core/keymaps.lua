@@ -118,6 +118,10 @@ map('t', '<Esc><Esc>', '<C-\\><C-n>')
 map('n', '<leader>A', 'ggVG', opts)
 
 
+-- Scroll Re-Center
+map('n', '<C-u>', '<C-u>zz', opts)
+map('n', '<C-d>', '<C-d>zz', opts)
+
 -- Auto pairs
 local function wrap_selection(left, right)
     return string.format('<Esc>`>a%s<Esc>`<i%s<Esc>', right, left)

@@ -35,7 +35,7 @@ local plugins = {
     'flash',
     'nvim-dap',
     'java-lsp',
-    'visimatch'
+    'visimatch',
 }
 
 require('plugins.lazy')
