@@ -45,6 +45,10 @@ return {
                 dapui.open()
             end
 
+            vim.api.nvim_create_user_command('DapUiToggle', function()
+                dapui.toggle()
+            end, { desc = 'Toggles the Dap UI' } )
+
         end,
     },
 }
