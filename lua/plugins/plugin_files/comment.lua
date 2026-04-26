@@ -41,6 +41,12 @@ return {
         ---Function to call before (un)comment
         pre_hook = nil,
         ---Function to call after (un)comment
-        post_hook = nil,
+        post_hook = function(ctx)
+            local U = require('Comment.utils')
+            -- Check if it's a linewise comment and we are in normal mode
+            if ctx.range.srow == ctx.range.erow and ctx.ctype == U.ctype.linewise then
+                vim.cmd('normal! j')
+            end
+        end,
     },
 }
