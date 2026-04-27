@@ -1,3 +1,6 @@
+local envparser = require('utis.envparser')
+local env = envparser.load_env(vim.fn.stdpath('config') .. '/.env')
+
 return {
     'mfussenegger/nvim-dap',
     dependencies = {
@@ -17,7 +20,7 @@ return {
         dap.adapters.cppdbg = {
             id = 'cppdbg',
             type = 'executable',
-            command = 'C:\\Users\\absolima\\AppData\\Local\\nvim-data\\mason\\packages\\cpptools\\extension\\debugAdapters\\bin\\OpenDebugAD7.exe',
+            command = 'C:\\Users\\' .. env.WINDOWS_PROFILE_NAME .. '\\AppData\\Local\\nvim-data\\mason\\packages\\cpptools\\extension\\debugAdapters\\bin\\OpenDebugAD7.exe',
             options = {
                 detached = false,
             },
@@ -27,7 +30,7 @@ return {
             type = 'server',
             port = '${port}',
             executable = {
-                command = 'C:\\Users\\absolima\\AppData\\Local\\nvim-data\\mason\\packages\\codelldb\\extension\\adapter\\codelldb.exe',
+                command = 'C:\\Users\\' .. env.WINDOWS_PROFILE_NAME .. '\\AppData\\Local\\nvim-data\\mason\\packages\\codelldb\\extension\\adapter\\codelldb.exe',
                 args = { '--port', '${port}' },
 
                 -- On windows you may have to uncomment this:
