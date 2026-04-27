@@ -30,9 +30,10 @@ map('n', 'grt', ':Telescope lsp_type_definitions<CR>', { desc = '[G]oto [T]ype D
 -- DAP --
 map('n', '<leader>db', ':DapToggleBreakpoint<CR>', opts)
 map('n', '<leader>dc', ':DapContinue<CR>', opts)
-map('n', '<leader>do', ':DapStepOver<CR>', opts)
-map('n', '<leader>di', ':DapStepInto<CR>', opts)
-map('n', '<leader>dO', ':DapStepOut<CR>', opts)
+map('n', '<S-Down>', ':DapStepOver<CR>', opts)
+map('n', '<S-Right>', ':DapStepInto<CR>', opts)
+map('n', '<S-Left>', ':DapStepOut<CR>', opts)
+map('n', '<S-Up>', ':DapRestartFrame<CR>', opts)
 map('n', '<leader>dq', ':DapTerminate<CR>', opts)
 map('n', '<leader>du', ':DapUiToggle<CR>', opts)
 

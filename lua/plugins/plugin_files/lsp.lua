@@ -30,6 +30,8 @@ return {
                         'black',
                         'clang-format',
                         'prettier',
+                        -- DAP plugins
+                        'cpptools',
                     },
                 })
             end,
