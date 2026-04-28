@@ -12,6 +12,6 @@ return {
         },
     },
     keys = {
-        { '<leader>f', mode = { 'n', 'x', 'o' }, function() require('flash').jump() end, desc = 'Flash', },
+        { '<leader>j', mode = { 'n', 'x', 'o' }, function() require('flash').jump() end, desc = 'Flash', },
     },
 }
