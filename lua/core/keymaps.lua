@@ -123,15 +123,30 @@ map('n', '<C-u>', '<C-u>zz', opts)
 map('n', '<C-d>', '<C-d>zz', opts)
 
 -- Auto pairs
-local function wrap_selection(left, right)
-    return string.format('<Esc>`>a%s<Esc>`<i%s<Esc>', right, left)
-end
+vim.keymap.set("v", "<leader>s", function()
+  local char = vim.fn.getcharstr()
 
-map('v', '(', wrap_selection('(', ')'))
-map('v', '[', wrap_selection('[', ']'))
-map('v', '{', wrap_selection('{', '}'))
-map('v', '"', wrap_selection('"', '"'))
-map('v', "'", wrap_selection("'", "'"))
+  local pairs = {
+    ["("] = ")",
+    ["["] = "]",
+    ["{"] = "}",
+    ["<"] = ">",
+  }
+
+  local open = char
+  local close = pairs[char] or char
+
+  return string.format("c%s<C-r>\"%s<Esc>", open, close)
+end, { expr = true, noremap = true, silent = true })
+-- local function wrap_selection(left, right)
+    --     return string.format('<Esc>`>a%s<Esc>`<i%s<Esc>', right, left)
+    -- end
+    --
+    -- map('v', '(', wrap_selection('(', ')'))
+    -- map('v', '[', wrap_selection('[', ']'))
+    -- map('v', '{', wrap_selection('{', '}'))
+    -- map('v', '"', wrap_selection('"', '"'))
+    -- map('v', "'", wrap_selection("'", "'"))
 
 
 -- Zoom in/out in Neovide
