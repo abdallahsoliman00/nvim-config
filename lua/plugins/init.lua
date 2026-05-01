@@ -36,6 +36,7 @@ local plugins = {
     'nvim-dap',
     'java-lsp',
     'visimatch',
+    'neocoderunner',
 }
 
 require('plugins.lazy')
