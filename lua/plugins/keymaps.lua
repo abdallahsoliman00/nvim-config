@@ -8,7 +8,7 @@ map('n', '<leader>e', ':Neotree reveal<cr>:vertical resize 30<CR>', opts)
 
 -- Neocoderunner --
 map('n', '<C-S-n>', ':RunCurrentFile<CR>', opts)
-map('v', '<C-S-n>', ':RunCodeSnippet<CR>', opts)
+map('v', '<C-S-n>', ':<C-U>RunCodeSnippet<CR>', opts)
 
 -- Telescope --
 map('n', '<leader>sf', ':Telescope find_files<CR>', { desc = 'Telescope find files' })
