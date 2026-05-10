@@ -7,6 +7,10 @@ vim.g.mapleader = ' '
 vim.g.maplocalleader = ' '
 
 
+-- Toggle relative line numbers
+map("n", "<leader>ln", ":lua vim.o.relativenumber = not vim.o.relativenumber<CR>", opts)
+
+
 -- Stay in indent mode
 map("v", "<", "<gv", opts)
 map("v", ">", ">gv", opts)
