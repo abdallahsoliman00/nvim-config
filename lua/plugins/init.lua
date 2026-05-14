@@ -37,6 +37,7 @@ local plugins = {
     'java-lsp',
     'visimatch',
     'neocoderunner',
+    'nightfox-theme',
 }
 
 require('plugins.lazy')
