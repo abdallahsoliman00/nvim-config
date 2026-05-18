@@ -61,17 +61,11 @@ map('n', 'dd', '"_dd', opts)
 map('n', '<leader>q', ':bnext<CR>', opts)
 map('n', '<leader><Tab>', ':bprevious<CR>', opts)
 map('n', '<leader>x', ':bp | bd #<CR>', opts)  -- close buffer without closing window
-map('n', '<leader>t', '<cmd> enew <CR>', opts) -- new buffer
 
 
 -- Go to end/beginning of line in insert mode (END/HOME key alternatives)
 map('i', '<C-e>', '<C-o>A', opts)
 map('i', '<C-h>', '<C-o>I', opts)
-
-
--- Undo and Redo with Ctrl+Z and Ctrl+Y in insert mode
-map('i', '<C-z>', '<C-o>u', opts)
-map('i', '<C-y>', '<C-o><C-r>', opts)
 
 
 -- Move text up and down
@@ -142,15 +136,6 @@ vim.keymap.set("v", "<leader>s", function()
 
   return string.format("c%s<C-r>\"%s<Esc>", open, close)
 end, { expr = true, noremap = true, silent = true })
--- local function wrap_selection(left, right)
-    --     return string.format('<Esc>`>a%s<Esc>`<i%s<Esc>', right, left)
-    -- end
-    --
-    -- map('v', '(', wrap_selection('(', ')'))
-    -- map('v', '[', wrap_selection('[', ']'))
-    -- map('v', '{', wrap_selection('{', '}'))
-    -- map('v', '"', wrap_selection('"', '"'))
-    -- map('v', "'", wrap_selection("'", "'"))
 
 
 -- Zoom in/out in Neovide
