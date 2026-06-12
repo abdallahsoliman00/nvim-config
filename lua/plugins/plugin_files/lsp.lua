@@ -117,6 +117,5 @@ return {
         vim.api.nvim_set_hl(0, 'LspReferenceText', { bg = '#3d3d3d' })
         vim.api.nvim_set_hl(0, 'LspReferenceRead', { bg = '#3d3d3d' })
         vim.api.nvim_set_hl(0, 'LspReferenceWrite', { bg = '#4d4d3d' })
-        -- vim.cmd('LspStop harper_ls')
     end,
 }

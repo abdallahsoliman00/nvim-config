@@ -24,7 +24,6 @@ local plugins = {
     'markdown',
     'indent-lines',
     'guess-indent',
-    'cmake',
     'vimbegood',
     'toggleterm',
     'live-server',
