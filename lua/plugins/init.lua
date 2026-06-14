@@ -35,13 +35,15 @@ local plugins = {
     'nvim-dap',
     'java-lsp',
     'visimatch',
-    'neocoderunner',
+    -- 'neocoderunner',
     'nightfox-theme',
+    'vim-tmux',
 }
 
 require('plugins.lazy')
 require('lazy').setup({
     compile_plugins(plugins),
+    { dir = "~/CodeStuffs/neocoderunner.nvim" }
 })
 
 require('plugins.keymaps')

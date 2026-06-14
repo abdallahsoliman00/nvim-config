@@ -55,6 +55,12 @@ map('n', '<leader>tf', ':ToggleAutoformat<CR>', { silent = true, desc = 'Toggle 
 map('n', '<C-\\>', ':ToggleTerm<CR>', opts)
 map('t', '<C-\\>', '<C-\\><C-n>:ToggleTerm<CR>', opts)
 
+-- Vim-tmux navigator
+map('n', "<c-h>", ":TmuxNavigateLeft<CR>", opts)
+map('n', "<c-j>", ":TmuxNavigateDown<CR>", opts)
+map('n', "<c-k>", ":TmuxNavigateUp<CR>", opts)
+map('n', "<c-l>", ":TmuxNavigateRight<CR>", opts)
+
 -- Manual format keymap for all languages
 vim.keymap.set('n', '<leader>fm', function()
     require('conform').format({ async = true, lsp_fallback = true })
