@@ -10,6 +10,9 @@ return {
                 enabled = false,
             },
         },
+        jump = {
+            autojump = true,
+        },
     },
     keys = {
         { '<leader>j', mode = { 'n', 'x', 'o' }, function() require('flash').jump() end, desc = 'Flash', },
