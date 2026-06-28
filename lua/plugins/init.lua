@@ -38,7 +38,8 @@ local plugins = {
     'visimatch',
     'neocoderunner',
     'nightfox-theme',
-    'git-preview'
+    'git-preview',
+    'lsp-hints',
 }
 
 require('plugins.lazy')
