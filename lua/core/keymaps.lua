@@ -82,7 +82,7 @@ map('c', '<C-v>', '<C-r>+')
 
 
 -- Easy Paste in insert mode
-map('i', '<C-v>', '<C-o>p')
+map('i', '<C-v>', '<C-o>P')
 
 
 -- Delete word with Ctrl+Delete and Ctrl+Backspace
@@ -143,7 +143,7 @@ if vim.g.neovide then
     vim.g.neovide_scale_factor = 0.65 -- default zoom
     map({ "n", "v" }, "<C-+>", ":lua vim.g.neovide_scale_factor = vim.g.neovide_scale_factor + 0.05<CR>", { silent = true })
     map({ "n", "v" }, "<C-_>", ":lua vim.g.neovide_scale_factor = vim.g.neovide_scale_factor - 0.05<CR>", { silent = true })
-    map({ "n", "v" }, "<C-)>", ":lua vim.g.neovide_scale_factor = 0.65<CR>", { silent = true })
+    map({ "n", "v" }, "<C-0>", ":lua vim.g.neovide_scale_factor = 0.65<CR>", { silent = true })
 end
 
 -- Toggle fullscreen in Neovide

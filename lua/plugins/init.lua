@@ -40,6 +40,7 @@ local plugins = {
     'nightfox-theme',
     'git-preview',
     'lsp-hints',
+    'tokyodark',
 }
 
 require('plugins.lazy')
