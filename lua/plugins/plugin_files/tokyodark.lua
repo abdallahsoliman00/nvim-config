@@ -3,12 +3,13 @@ return {
     opts = {
         custom_palette = function(palette)
             return {
-                diff_blue = '#39d5e3', -- brighter blue
+                diff_blue = '#68d6da',
             }
         end,
         custom_highlights = function(highlights, palette)
             return {
                 Visual = { bg = "#353945" },
+                ["@lsp.type.selfParameter.python"] = { fg = "#FFFFFF", bold = true },
             }
         end,
         terminal_colors = false,

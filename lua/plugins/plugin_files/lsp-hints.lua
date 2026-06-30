@@ -3,9 +3,9 @@ return {
     event = 'InsertEnter',
     opts = {
         bind = true,
-        -- handler_opts = {
-        --     border = 'rounded',
-        -- },
+        handler_opts = {
+            border = 'rounded',
+        },
         hint_enable = true,
         hint_prefix = "",
         hint_inline = function() return 'eol' end,
