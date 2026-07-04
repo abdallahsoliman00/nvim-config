@@ -16,6 +16,9 @@ map("v", "<", "<gv", opts)
 map("v", ">", ">gv", opts)
 
 
+-- Clear line and stay in normal mode
+map("n", "cc", "cc<Esc>")
+
 -- Easy unindent
 map('i', '<S-Tab>', '<C-o><<', opts)
 
@@ -82,7 +85,7 @@ map('c', '<C-v>', '<C-r>+')
 
 
 -- Easy Paste in insert mode
-map('i', '<C-v>', '<C-o>p')
+map('i', '<C-v>', '<C-o>P')
 
 
 -- Delete word with Ctrl+Delete and Ctrl+Backspace

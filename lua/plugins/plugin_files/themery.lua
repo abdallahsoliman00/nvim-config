@@ -5,8 +5,8 @@ return {
         -- Minimal config
         require('themery').setup({
             themes = {
-                'onedark', 'tokyodark', 'tokyonight-night', 'tokyonight-storm', 'tokyonight-moon',
-                'nightfox', 'duskfox', 'nordfox', 'terafox', 'carbonfox'
+                'onedark', 'tokyonight-night', 'tokyonight-storm', 'tokyonight-moon',
+                'tokyodark', 'nightfox', 'duskfox', 'nordfox', 'terafox', 'carbonfox'
             },
             livePreview = true, -- Apply theme while picking. Default to true.
         })
