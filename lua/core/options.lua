@@ -26,6 +26,6 @@ vim.o.smartindent = true
 vim.o.undofile = true
 
 if vim.g.neovide then
-    vim.g.neovide_scroll_animation_length = 0.2
-    vim.g.neovide_cursor_animation_length = 0.125
+    vim.g.neovide_scroll_animation_length = 0.15
+    vim.g.neovide_cursor_animation_length = 0.075
 end

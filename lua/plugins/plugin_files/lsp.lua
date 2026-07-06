@@ -38,8 +38,16 @@ return {
         },
         'neovim/nvim-lspconfig',
         'stevearc/conform.nvim',
+        'SmiteshP/nvim-navbuddy',
+        'SmiteshP/nvim-navic',
+        'MunifTanjim/nui.nvim',
     },
     config = function()
+        -- Setup navbuddy
+        require('nvim-navbuddy').setup({
+            lsp = { auto_attach = true },
+        })
+
         -- Configure diagnostics
         vim.diagnostic.config({
             virtual_text = {
@@ -52,9 +60,9 @@ return {
         require('mason-lspconfig').setup({
             automatic_enable = {
                 exclude = {
-                    "harper_ls"
-                }
-            }
+                    'harper_ls',
+                },
+            },
         })
 
         -- Setup conform

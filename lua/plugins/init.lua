@@ -39,7 +39,7 @@ local plugins = {
     'neocoderunner',
     'nightfox-theme',
     'git-preview',
-    'lsp-hints',
+    -- 'lsp-hints',
     'tokyodark',
 }
 
