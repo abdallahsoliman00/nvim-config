@@ -91,14 +91,6 @@ map('i', '<C-BS>', '<C-w>', opts)
 map('t', '<C-BS>', '<C-w>', opts)
 
 
--- Git add current buffer/file
-map('n', '<leader>ga', function()
-    local file = vim.fn.expand('%.')
-    vim.fn.system('git add ' .. file)
-    print('Added ' .. file .. ' to git')
-end)
-
-
 -- Clear highlights on search when pressing <Esc> in normal mode
 map('n', '<Esc>', '<cmd>nohlsearch<CR>')
 
