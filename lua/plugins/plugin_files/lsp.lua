@@ -30,6 +30,7 @@ return {
                         'black',
                         'clang-format',
                         'prettier',
+                        'xmlformatter',
                         -- DAP plugins
                         'cpptools',
                     },
@@ -73,6 +74,7 @@ return {
                 c = { 'clang-format' },
                 cpp = { 'clang-format' },
                 json = { 'prettier' },
+                xml = { 'xmlformatter' },
                 html = { 'prettier' },
                 css = { 'prettier' },
                 javascript = { 'prettier' },
