@@ -38,7 +38,8 @@ local plugins = {
     'neocoderunner',
     'nightfox-theme',
     'vim-tmux',
-    'git-preview'
+    'git-preview',
+    'tokyodark',
 }
 
 require('plugins.lazy')

@@ -16,6 +16,9 @@ map("v", "<", "<gv", opts)
 map("v", ">", ">gv", opts)
 
 
+-- Clear line and stay in normal mode
+map("n", "cc", "cc<Esc>")
+
 -- Easy unindent
 map('i', '<S-Tab>', '<C-o><<', opts)
 
@@ -82,7 +85,7 @@ map('c', '<C-v>', '<C-r>+')
 
 
 -- Easy Paste in insert mode
-map('i', '<C-v>', '<C-o>p')
+map('i', '<C-v>', '<C-o>P')
 
 
 -- Delete word with Ctrl+Delete and Ctrl+Backspace
@@ -132,10 +135,10 @@ end, { expr = true, noremap = true, silent = true })
 
 -- Zoom in/out in Neovide
 if vim.g.neovide then
-    vim.g.neovide_scale_factor = 0.65 -- default zoom
-    map({ "n", "v" }, "<C-=>", ":lua vim.g.neovide_scale_factor = vim.g.neovide_scale_factor + 0.05<CR>", { silent = true })
-    map({ "n", "v" }, "<C-->", ":lua vim.g.neovide_scale_factor = vim.g.neovide_scale_factor - 0.05<CR>", { silent = true })
-    map({ "n", "v" }, "<C-0>", ":lua vim.g.neovide_scale_factor = 0.65<CR>", { silent = true })
+    vim.g.neovide_scale_factor = 1.05 -- default zoom
+    map({ "n", "v" }, "<C-+>", ":lua vim.g.neovide_scale_factor = vim.g.neovide_scale_factor + 0.05<CR>", { silent = true })
+    map({ "n", "v" }, "<C-_>", ":lua vim.g.neovide_scale_factor = vim.g.neovide_scale_factor - 0.05<CR>", { silent = true })
+    map({ "n", "v" }, "<C-0>", ":lua vim.g.neovide_scale_factor = 1.05<CR>", { silent = true })
 end
 
 -- Toggle fullscreen in Neovide
