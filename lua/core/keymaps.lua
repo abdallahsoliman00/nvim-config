@@ -16,6 +16,9 @@ map("v", "<", "<gv", opts)
 map("v", ">", ">gv", opts)
 
 
+-- Clear line and stay in normal mode
+map("n", "cc", "cc<Esc>")
+
 -- Easy unindent
 map('i', '<S-Tab>', '<C-o><<', opts)
 
