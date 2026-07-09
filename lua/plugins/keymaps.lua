@@ -7,6 +7,8 @@ map('n', '\\', ':Neotree toggle position=left<CR>:vertical resize 30<CR>', opts)
 map('n', '<leader>e', ':Neotree reveal<cr>:vertical resize 30<CR>', opts)
 
 -- Neocoderunner --
+map('n', '<C-S-b>', ':NCRunnerBuild<CR>', opts)
+map('n', '<C-S-r>', ':NCRunnerRun<CR>', opts)
 map('n', '<C-S-n>', ':RunCurrentFile<CR>', opts)
 map('v', '<C-S-n>', ':<C-U>RunCodeSnippet<CR>', opts)
 
