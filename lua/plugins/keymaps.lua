@@ -7,10 +7,13 @@ map('n', '\\', ':Neotree toggle position=left<CR>:vertical resize 30<CR>', opts)
 map('n', '<leader>e', ':Neotree reveal<cr>:vertical resize 30<CR>', opts)
 
 -- Neocoderunner --
+map('n', '<C-S-b>', ':NCRunnerBuild<CR>', opts)
+map('n', '<C-S-r>', ':NCRunnerRun<CR>', opts)
 map('n', '<C-S-n>', ':RunCurrentFile<CR>', opts)
 map('v', '<C-S-n>', ':<C-U>RunCodeSnippet<CR>', opts)
 
 -- Telescope --
+map('n', '<leader>ts', ':Telescope<CR>', { desc = 'Open Telescope' })
 map('n', '<leader>sf', ':Telescope find_files<CR>', { desc = 'Telescope find files' })
 map('n', '<leader>gr', ':Telescope live_grep<CR>', { desc = 'Telescope live grep' })
 map('n', '<leader>gs', ':Telescope grep_string<CR>', { desc = 'Telescope grep string under cursor' })
