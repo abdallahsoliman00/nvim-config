@@ -33,6 +33,7 @@ map('n', 'grD', vim.lsp.buf.declaration, { desc = '[G]oto [D]eclaration' })
 map('n', 'gO', ':Telescope lsp_document_symbols<CR>', { desc = 'Open Document Symbols' })
 map('n', 'gW', ':Telescope lsp_dynamic_worspace_symbols<CR>', { desc = 'Open Workspace Symbols' })
 map('n', 'grt', ':Telescope lsp_type_definitions<CR>', { desc = '[G]oto [T]ype Definition' })
+map('n', '<leader>sd', vim.diagnostic.open_float, { desc = 'Show diagnostic in floating window'})
 
 -- DAP --
 map('n', '<leader>db', ':DapToggleBreakpoint<CR>', opts)
