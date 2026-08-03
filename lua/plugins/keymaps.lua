@@ -23,9 +23,10 @@ map('n', '<leader>hh', ':Gitsigns preview_hunk<CR>')
 map('n', '<leader>hn', ':Gitsigns next_hunk<CR>')
 map('n', '<leader>hp', ':Gitsigns prev_hunk<CR>')
 
--- LSP --
+-- Telescope / LSP --
 map('n', 'grn', vim.lsp.buf.rename, { desc = '[R]e[n]ame' })
 map('n', '<leader>ds', vim.lsp.buf.code_action, { desc = 'See code actions' })
+map('n', '<leader>sd', vim.diagnostic.open_float, { desc = 'Show diagnostic in floating window'})
 map('n', 'grr', ':Telescope lsp_references<CR>', { desc = '[G]oto [R]eferences' })
 map('n', 'gri', ':Telescope lsp_implementations<CR>', { desc = '[G]oto [I]mplementation' })
 map('n', 'grd', ':Telescope lsp_definitions<CR>', { desc = '[G]oto [D]efinition' })
@@ -33,7 +34,6 @@ map('n', 'grD', vim.lsp.buf.declaration, { desc = '[G]oto [D]eclaration' })
 map('n', 'gO', ':Telescope lsp_document_symbols<CR>', { desc = 'Open Document Symbols' })
 map('n', 'gW', ':Telescope lsp_dynamic_worspace_symbols<CR>', { desc = 'Open Workspace Symbols' })
 map('n', 'grt', ':Telescope lsp_type_definitions<CR>', { desc = '[G]oto [T]ype Definition' })
-map('n', '<leader>sd', vim.diagnostic.open_float, { desc = 'Show diagnostic in floating window'})
 
 -- DAP --
 map('n', '<leader>db', ':DapToggleBreakpoint<CR>', opts)
