@@ -6,7 +6,8 @@ return {
         require('themery').setup({
             themes = {
                 'onedark', 'tokyonight-night', 'tokyonight-storm', 'tokyonight-moon',
-                'tokyodark', 'nightfox', 'duskfox', 'nordfox', 'terafox', 'carbonfox'
+                'tokyodark', 'nightfox', 'duskfox', 'nordfox', 'terafox', 'carbonfox',
+                'retrobox',
             },
             livePreview = true, -- Apply theme while picking. Default to true.
         })
