@@ -2,7 +2,7 @@ return {
     'vieitesss/minifugit.nvim',
     cmd = { 'MinifugitStatus' },
     opts = {
-    preview = {
+        preview = {
             -- Start diff previews with wrapping disabled.
             wrap = false,
 
@@ -16,5 +16,8 @@ return {
             -- Diff preview layout: 'stacked', 'split', or 'auto'.
             diff_layout = 'split',
         },
-    }
+        status = {
+            width = 0.3,
+        }
+    },
 }
