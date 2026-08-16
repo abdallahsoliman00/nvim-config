@@ -9,7 +9,7 @@ return {
     lazy = false, -- neo-tree will lazily load itself
     opts = {
       clipboard = {
-        sync = 'global',
+        sync = 'universal',
       },
     }
 }
