@@ -40,6 +40,7 @@ local plugins = {
     'git-preview',
     -- 'lsp-hints',
     'tokyodark',
+    'smart-paste',
 }
 
 require('plugins.lazy')
