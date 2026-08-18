@@ -42,7 +42,7 @@ map("n", "<leader>pq", require("overlook.api").close_all, { desc = "Close all po
 map("n", "<leader>ps", require("overlook.api").open_in_split, { desc = "Open popup in split" })
 map("n", "<leader>pf", require("overlook.api").switch_focus, { desc = "Switch focus" })
 map("n", "<leader>pv", require("overlook.api").open_in_vsplit, { desc = "Open popup in vsplit" })
-map("n", "<leader>p<CR>", require("overlook.api").open_in_original_window, { desc = "Open popup in current window" })
+map("n", "<leader>po", require("overlook.api").open_in_original_window, { desc = "Open popup in current window" })
 
 -- DAP --
 map('n', '<leader>db', ':DapToggleBreakpoint<CR>', opts)
