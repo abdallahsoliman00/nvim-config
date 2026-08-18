@@ -40,6 +40,7 @@ map('n', 'grd', require("overlook.api").peek_definition, { desc = "Peek definiti
 map('n', '<leader>pp', require("overlook.api").peek_cursor, { desc = "Peek definition" })
 map("n", "<leader>pq", require("overlook.api").close_all, { desc = "Close all popups" })
 map("n", "<leader>ps", require("overlook.api").open_in_split, { desc = "Open popup in split" })
+map("n", "<leader>pf", require("overlook.api").switch_focus, { desc = "Switch focus" })
 map("n", "<leader>pv", require("overlook.api").open_in_vsplit, { desc = "Open popup in vsplit" })
 map("n", "<leader>p<CR>", require("overlook.api").open_in_original_window, { desc = "Open popup in current window" })
 
