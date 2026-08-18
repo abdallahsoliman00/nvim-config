@@ -1,4 +1,5 @@
 local function add_plugin(name)
+
     return require('plugins.plugin_files.' .. name)
 end
 
@@ -41,6 +42,8 @@ local plugins = {
     -- 'lsp-hints',
     'tokyodark',
     'smart-paste',
+    'overlook',
+    'suannhai',
 }
 
 require('plugins.lazy')
