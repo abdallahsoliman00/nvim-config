@@ -88,6 +88,10 @@ map('c', '<C-v>', '<C-r>+')
 map('i', '<C-v>', '<C-o>P')
 
 
+-- The `*` doesn't automatically jump to the next instance
+map('n', '*', '*N', opts)
+
+
 -- Delete word with Ctrl+Delete and Ctrl+Backspace
 map('i', '<C-Del>', '<C-o>dw', opts)
 map('i', '<C-BS>', '<C-w>', opts)
