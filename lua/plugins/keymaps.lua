@@ -20,8 +20,8 @@ map('n', '<leader>gs', ':Telescope grep_string<CR>', { desc = 'Telescope grep st
 
 -- Gitsigns --
 map('n', '<leader>hh', ':Gitsigns preview_hunk<CR>')
-map('n', ']h', ':Gitsigns next_hunk<CR>')
-map('n', '[h', ':Gitsigns prev_hunk<CR>')
+map('n', ']w', ':Gitsigns next_hunk<CR>')
+map('n', '[w', ':Gitsigns prev_hunk<CR>')
 
 -- Telescope / LSP --
 map('n', 'grn', vim.lsp.buf.rename, { desc = '[R]e[n]ame' })

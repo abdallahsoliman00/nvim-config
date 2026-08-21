@@ -16,9 +16,6 @@ map("v", "<", "<gv", opts)
 map("v", ">", ">gv", opts)
 
 
--- Clear line and stay in normal mode
-map("n", "cc", "cc<Esc>")
-
 -- Easy unindent
 map('i', '<S-Tab>', '<C-o><<', opts)
 
@@ -48,6 +45,8 @@ map('n', '<C-l>', ':wincmd l<CR>', opts)
 -- Paste buffer override
 map('v', 'p', '"_dP', opts)
 
+-- Clear line and stay in normal mode
+map("n", "cc", '"_cc<Esc>')
 
 -- Delete without copying to register
 map({'n', 'v'}, 'x', '"_x', opts)
@@ -89,8 +88,36 @@ map('i', '<C-v>', '<C-o>P')
 
 
 -- The `*` doesn't automatically jump to the next instance
-map('n', '*', '*N', opts)
+vim.keymap.set("n", "*", function()
+  local word = vim.fn.expand("<cword>")
+  vim.fn.setreg("/", "\\<" .. vim.fn.escape(word, "\\") .. "\\>")
+  vim.opt.hlsearch = true
+  vim.cmd("normal! b")
+end, { desc = "Highlight word under cursor" })
 
+
+vim.keymap.set("v", "*", function()
+  vim.cmd([[execute "normal! \<Esc>"]])
+
+  -- Get the text inside the visual selection
+  local start_pos = vim.fn.getpos("'<")
+  local end_pos = vim.fn.getpos("'>")
+  local lines = vim.fn.getline(start_pos[2], end_pos[2])
+  if #lines == 0 then return end
+
+  -- Handle multi-character and multi-line visual selections safely
+  lines[#lines] = string.sub(lines[#lines], 1, end_pos[3])
+  lines[1] = string.sub(lines[1], start_pos[3])
+  local selected_text = table.concat(lines, "\n")
+
+  -- Set the search register (\V for literal matching)
+  local pattern = "\\V" .. vim.fn.escape(selected_text, "\\")
+  vim.fn.setreg("/", pattern)
+  vim.opt.hlsearch = true
+
+  -- Move the cursor exactly to the beginning of the selection
+  vim.fn.setpos(".", start_pos)
+end, { desc = "Highlight selection under cursor" })
 
 -- Delete word with Ctrl+Delete and Ctrl+Backspace
 map('i', '<C-Del>', '<C-o>dw', opts)
