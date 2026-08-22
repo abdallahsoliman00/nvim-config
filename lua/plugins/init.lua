@@ -40,6 +40,7 @@ local plugins = {
     'vim-tmux',
     'git-preview',
     'tokyodark',
+    'overlook',
 }
 
 require('plugins.lazy')
