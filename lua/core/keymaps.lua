@@ -90,9 +90,12 @@ map('i', '<C-v>', '<C-o>P')
 -- The `*` doesn't automatically jump to the next instance
 vim.keymap.set("n", "*", function()
   local word = vim.fn.expand("<cword>")
-  vim.fn.setreg("/", "\\<" .. vim.fn.escape(word, "\\") .. "\\>")
+  local pattern = "\\<" .. vim.fn.escape(word, "\\") .. "\\>"
+  vim.fn.setreg("/", pattern)
   vim.opt.hlsearch = true
-  vim.cmd("normal! b")
+
+  local pos = vim.fn.searchpos(pattern, "bcnW")
+  vim.fn.cursor(pos)
 end, { desc = "Highlight word under cursor" })
 
 
