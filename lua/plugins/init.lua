@@ -25,7 +25,7 @@ local plugins = {
     'markdown',
     'indent-lines',
     'guess-indent',
-    'vimbegood',
+    -- 'vimbegood',
     'toggleterm',
     'live-server',
     'comment',
@@ -43,7 +43,7 @@ local plugins = {
     'tokyodark',
     'smart-paste',
     'overlook',
-    'suannhai',
+    'dark2026',
 }
 
 require('plugins.lazy')
