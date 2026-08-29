@@ -7,7 +7,7 @@ return {
             themes = {
                 'onedark', 'tokyonight-night', 'tokyonight-storm', 'tokyonight-moon',
                 'tokyodark', 'nightfox', 'duskfox', 'nordfox', 'terafox', 'carbonfox',
-                'retrobox',
+                'retrobox', 'dark2026',
             },
             livePreview = true, -- Apply theme while picking. Default to true.
         })

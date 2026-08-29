@@ -24,11 +24,11 @@ local plugins = {
     'markdown',
     'indent-lines',
     'guess-indent',
-    'vimbegood',
+    -- 'vimbegood',
     'toggleterm',
     'live-server',
     'comment',
-    'neogen',
+    -- 'neogen',
     'themery',
     'tokyonight',
     'flash',
@@ -41,6 +41,7 @@ local plugins = {
     'git-preview',
     'tokyodark',
     'overlook',
+    'dark2026',
 }
 
 require('plugins.lazy')
