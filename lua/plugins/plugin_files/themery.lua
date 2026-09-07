@@ -1,15 +1,21 @@
 return {
     'zaldih/themery.nvim',
     lazy = false,
-    config = function()
-        -- Minimal config
-        require('themery').setup({
-            themes = {
-                'onedark', 'tokyonight-night', 'tokyonight-storm', 'tokyonight-moon',
-                'tokyodark', 'nightfox', 'duskfox', 'nordfox', 'terafox', 'carbonfox',
-                'retrobox', 'dark2026',
-            },
-            livePreview = true, -- Apply theme while picking. Default to true.
-        })
-    end,
+    opts = {
+        themes = {
+            { name = "One Dark", colorscheme = "onedark" },
+            { name = "Tokyonight Night", colorscheme = "tokyonight-night" },
+            { name = "Tokyonight Storm", colorscheme = "tokyonight-storm" },
+            { name = "Tokyonight Moon", colorscheme = "tokyonight-moon" },
+            { name = "Tokyodark", colorscheme = "tokyodark" },
+            { name = "NightFox", colorscheme = "nightfox" },
+            { name = "DuskFox", colorscheme = "duskfox" },
+            { name = "NordFox", colorscheme = "nordfox" },
+            { name = "TeraFox", colorscheme = "terafox" },
+            { name = "CarbonFox", colorscheme = "carbonfox" },
+            { name = "Gruvbox Dark", colorscheme = "retrobox", before = [[ vim.opt.background = "dark" ]] },
+            { name = "Dark 2026", colorscheme = "dark2026" },
+        },
+        livePreview = true,
+    }
 }
