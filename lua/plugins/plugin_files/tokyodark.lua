@@ -10,6 +10,7 @@ return {
             return {
                 Visual = { bg = "#353945" },
                 ["@lsp.type.selfParameter.python"] = { fg = "#FFFFFF", bold = true },
+                TelescopeSelection = { bg = palette.green, fg = "#000000" },
             }
         end,
         terminal_colors = false,
