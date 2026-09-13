@@ -1,5 +1,5 @@
 return {
-    'zaldih/themery.nvim',
+    'abdallahsoliman00/themery.nvim',
     lazy = false,
     opts = {
         themes = {
