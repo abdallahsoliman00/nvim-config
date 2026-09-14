@@ -25,9 +25,9 @@ return {
                         'cssls',
                         'typescript-language-server',
                         'rust-analyzer',
-                        -- Formatters
+                        -- Formatters / Linters
                         'stylua',
-                        'black',
+                        'ruff',
                         'clang-format',
                         'prettier',
                         -- DAP plugins
@@ -61,7 +61,7 @@ return {
         require('conform').setup({
             formatters_by_ft = {
                 lua = { 'stylua' },
-                python = { 'black' },
+                python = { 'ruff' },
                 c = { 'clang-format' },
                 cpp = { 'clang-format' },
                 json = { 'prettier' },
