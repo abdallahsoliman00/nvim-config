@@ -42,6 +42,7 @@ local plugins = {
     'tokyodark',
     'overlook',
     'dark2026',
+    'image',
 }
 
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
