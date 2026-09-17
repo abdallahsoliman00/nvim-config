@@ -6,7 +6,7 @@ return {
         ensure_installed = {
             'c', 'cpp', 'python', 'html', 'css', 'lua',
             'make', 'cmake', 'yaml', 'json', 'markdown',
-            'typescript', 'javascript', 'rust'
+            'typescript', 'javascript', 'rust', 'tsx',
         },
         highlight = { enable = true },
         indent = { enable = true },
