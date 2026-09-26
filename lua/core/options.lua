@@ -16,6 +16,8 @@ vim.o.splitbelow = true
 vim.o.splitright = true
 vim.o.smartindent = true
 vim.o.undofile = true
+vim.opt.breakindent = true
+vim.opt.linebreak = true
 
 if vim.g.neovide then
     vim.g.neovide_scroll_animation_length = 0.15
