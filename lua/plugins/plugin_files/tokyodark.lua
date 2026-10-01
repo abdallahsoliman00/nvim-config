@@ -9,7 +9,7 @@ return {
         custom_highlights = function(highlights, palette)
             return {
                 Visual = { bg = "#353945" },
-                ["@lsp.type.selfParameter.python"] = { fg = "#FFFFFF", bold = true },
+                ["@lsp.type.selfParameter.python"] = { fg = "#FFFFFF", bold = true, italic = false ,},
                 TelescopeSelection = { bg = palette.green, fg = "#000000" },
             }
         end,

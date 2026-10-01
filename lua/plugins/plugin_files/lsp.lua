@@ -15,7 +15,7 @@ return {
                         -- LSP servers
                         'lua-language-server',
                         'clangd',
-                        'basedpyright',
+                        'ty',
                         'neocmakelsp',
                         'jdtls',
                         'json-lsp',
