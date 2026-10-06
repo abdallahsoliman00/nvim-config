@@ -30,6 +30,7 @@ return {
                         'ruff',
                         'clang-format',
                         'prettier',
+                        'xmlformatter',
                         -- DAP plugins
                         'cpptools',
                     },
@@ -71,6 +72,7 @@ return {
                 typescript = { 'prettier' },
                 javascriptreact = { 'prettier' },
                 typescriptreact = { 'prettier' },
+                xml = { 'xmlformatter' },
             },
             format_on_save = function(bufnr)
                 if not vim.g.autoformat_enabled then
