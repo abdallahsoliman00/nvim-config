@@ -28,6 +28,11 @@ map('n', 'U', '<C-r>', opts)
 map('n', '<leader>lw', '<cmd>set wrap!<CR>', opts)
 
 
+-- Intuitive movement when working with wrapped text
+map({ "n", "x" }, "j", "gj")
+map({ "n", "x" }, "k", "gk")
+
+
 -- Resize windows
 map('n', '<C-Up>', ':resize +2<CR>', opts)
 map('n', '<C-Down>', ':resize -2<CR>', opts)
