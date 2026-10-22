@@ -186,11 +186,24 @@ if vim.g.neovide then
     map("n", "<C-S-F>", ":lua vim.g.neovide_fullscreen = not vim.g.neovide_fullscreen<CR>", { silent = true } )
 end
 
--- Open global TODO file
+-- Open global TODO.md file
 vim.api.nvim_create_user_command('Todo', function()
   local path
   if vim.fn.has('win32') == 1 then
     path = vim.fn.expand('$USERPROFILE/TODO.md')
+  else
+    path = vim.fn.expand('~/TODO.md')
+  end
+  vim.cmd('edit ' .. path)
+  vim.cmd('normal! Gzz')
+end, {})
+
+
+-- Open global NOTES.md file
+vim.api.nvim_create_user_command('Notes', function()
+  local path
+  if vim.fn.has('win32') == 1 then
+    path = vim.fn.expand('$USERPROFILE/NOTES.md')
   else
     path = vim.fn.expand('~/TODO.md')
   end
