@@ -205,7 +205,7 @@ vim.api.nvim_create_user_command('Notes', function()
   if vim.fn.has('win32') == 1 then
     path = vim.fn.expand('$USERPROFILE/NOTES.md')
   else
-    path = vim.fn.expand('~/TODO.md')
+    path = vim.fn.expand('~/NOTES.md')
   end
   vim.cmd('edit ' .. path)
   vim.cmd('normal! Gzz')
