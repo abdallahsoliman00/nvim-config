@@ -210,3 +210,10 @@ vim.api.nvim_create_user_command('Notes', function()
   vim.cmd('edit ' .. path)
   vim.cmd('normal! Gzz')
 end, {})
+
+
+-- Multicursor clear
+vim.keymap.set('n', '<C-S-L>', function()
+  local ns = vim.api.nvim_create_namespace('nvim.multicursor')
+  vim.api.nvim_buf_clear_namespace(0, ns, 0, -1)
+end, { desc = 'Clear multicursors' })
